@@ -1,5 +1,4 @@
 steps:
-timeout: 1200s
   - name: 'gcr.io/cloud-builders/docker'
     id: cacheLatest
     entrypoint: 'bash'
@@ -35,4 +34,7 @@ images:
   - gcr.io/zcash-web/bb-worker-debian8
   - gcr.io/zcash-web/bb-worker-debian9
   - gcr.io/zcash-web/bb-worker-debian10
-  - 
+  - gcr.io/zcash-web/bb-worker-ubuntu1604
+  - gcr.io/zcash-web/bb-worker-ubuntu1804
+  - gcr.io/zcash-web/bb-worker-ubuntu1904
+timeout: 1200s
