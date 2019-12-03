@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-f', 'Dockerfile.debian8', '--tag=gcr.io/zcash-web/bb-worker-debian8', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-f', 'Dockerfile.debian9', '--tag=gcr.io/zcash-web/bb-worker-debian9', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-f', 'Dockerfile.debian10', '--tag=gcr.io/zcash-web/bb-worker-debian10', '.']
