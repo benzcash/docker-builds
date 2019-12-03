@@ -31,3 +31,8 @@ timeout: 1200s
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-f', 'bb-worker/Dockerfile.ubuntu1904', '--tag=gcr.io/zcash-web/bb-worker-ubuntu1904', 'bb-worker/', '--cache-from', 'gcr.io/zcash-web/bb-worker-ubuntu1904:latest']
     waitFor: ['cacheLatest']
+images:
+  - gcr.io/zcash-web/bb-worker-debian8
+  - gcr.io/zcash-web/bb-worker-debian9
+  - gcr.io/zcash-web/bb-worker-debian10
+  - 
