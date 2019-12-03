@@ -1,5 +1,4 @@
 steps:
-timeout: 1200s
   - name: 'gcr.io/cloud-builders/docker'
     id: cacheLatest
     entrypoint: 'bash'
@@ -31,3 +30,4 @@ timeout: 1200s
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-f', 'bb-worker/Dockerfile.ubuntu1904', '--tag=gcr.io/zcash-web/bb-worker-ubuntu1904', 'bb-worker/', '--cache-from', 'gcr.io/zcash-web/bb-worker-ubuntu1904:latest']
     waitFor: ['cacheLatest']
+timeout: 1200s
